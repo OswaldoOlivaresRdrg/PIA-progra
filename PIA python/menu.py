@@ -1,11 +1,21 @@
-def mostrar_menu():
-    print("=== MENÚ ===")
-    print("1. Opción 1")
-    print("2. Opción 2")
-    print("3. Opción 3")
-    print("4. Opción 4")
-    print("5. Salir")
+import archivos
+import subMenu
 
-    opcion = input("Seleccione una opción: ")
+def opcion_1():
+    print("Has seleccionado Personajes.")
+    subMenu.seleccion_especifica_personajes()
 
-    return opcion
+def opcion_2():
+    print("Has seleccionado Naves.")
+    subMenu.seleccion_especifica_naves()
+
+def opcion_3():
+    print("Has seleccionado Animales.")
+
+def opcion_4():
+    print("Has seleccionado Archivos.")
+    print(archivos.Archivo.read())
+
+def opcion_salir():
+    print("Saliendo del programa...")
+    quit()
