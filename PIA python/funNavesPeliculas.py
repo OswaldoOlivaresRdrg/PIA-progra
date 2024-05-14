@@ -5,8 +5,8 @@ def obtener_informacion_naves(IdNave):
     url = f"https://swapi.dev/api/starships/{IdNave}/"
     respuesta = requests.get(url)
     if respuesta.status_code == 200:
-        datos_naves = respuesta.json
-        return datos_naves
+        datosNaves = respuesta.json
+        return datosNaves
     else:
         print("Error al obtener la información de de la nave.")
         return None

@@ -5,33 +5,33 @@ def obtener_informacion_personaje(id_personaje):
     url = f"https://swapi.dev/api/people/{id_personaje}/"
     respuesta = requests.get(url)
     if respuesta.status_code == 200:
-        datos_personaje = respuesta.json()
-        return datos_personaje
+        datosPersonaje = respuesta.json()
+        return datosPersonaje
     else:
         print("Error al obtener la información del personaje.")
         return None
 
-def mostrar_caracteristicas_fisicas(datos_personaje):
+def mostrar_caracteristicas_fisicas(datosPersonaje):
     os.system('cls')
-    print("Características Físicas de", datos_personaje['name'], ": ")
-    print("Altura:", datos_personaje['height'])
-    print("Peso:", datos_personaje['mass'])
-    print("ojos: ", datos_personaje['eye_color'])
-    print("Piel: ", datos_personaje['skin_color'])
+    print("Características Físicas de", datosPersonaje['name'], ": ")
+    print("Altura:", datosPersonaje['height'])
+    print("Peso:", datosPersonaje['mass'])
+    print("ojos: ", datosPersonaje['eye_color'])
+    print("Piel: ", datosPersonaje['skin_color'])
 
-def mostrar_datos_generales(datos_personaje):
+def mostrar_datos_generales(datosPersonaje):
     os.system('cls')
-    print("Datos Generales de", datos_personaje['name'], ": ")
-    print("Género:", datos_personaje['gender'])
-    print("Año de nacimiento:", datos_personaje['birth_year'])
-    nombre_planeta = obtener_nombres([datos_personaje['homeworld']])
-    print("Lugar de nacimiento: ", nombre_planeta)
-    lista_vechiculos = obtener_nombres(datos_personaje['vehicles'])
-    print("Vehiculos: ", lista_vechiculos)
-    nombres_naves = obtener_nombres(datos_personaje['starships'])
-    print("Naves pilotadas:", nombres_naves)
-    nombre_peliculas = obtener_nombres(datos_personaje['films'])
-    print("Apariciones: ", nombre_peliculas)
+    print("Datos Generales de", datosPersonaje['name'], ": ")
+    print("Género:", datosPersonaje['gender'])
+    print("Año de nacimiento:", datosPersonaje['birth_year'])
+    nombrePlaneta = obtener_nombres([datosPersonaje['homeworld']])
+    print("Lugar de nacimiento: ", nombrePlaneta)
+    listaVehiculos = obtener_nombres(datosPersonaje['vehicles'])
+    print("Vehiculos: ", listaVehiculos)
+    nombreNaves = obtener_nombres(datosPersonaje['starships'])
+    print("Naves pilotadas:", nombreNaves)
+    nombrePeliculas = obtener_nombres(datosPersonaje['films'])
+    print("Apariciones: ", nombrePeliculas)
 
 def obtener_nombres(urls):
     nombres = []

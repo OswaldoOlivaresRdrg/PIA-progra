@@ -1,4 +1,4 @@
-import menu
+import Menu
 import os
 def main():
     while True:
@@ -12,15 +12,15 @@ def main():
         opcion = input("Seleccione una opción: ")
 
         if opcion == "1":
-            menu.opcion_1()
+            Menu.opcion_1()
         elif opcion == "2":
-            menu.opcion_2()
+            Menu.opcion_2()
         elif opcion == "3":
-            menu.opcion_3()
+            Menu.opcion_3()
         elif opcion == "4":
-            menu.opcion_4()
+            Menu.opcion_4()
         elif opcion == "5":
-            menu.opcion_salir()
+            Menu.opcion_salir()
         else:
             print("Opción inválida. Por favor, seleccione una opción válida.")
 
