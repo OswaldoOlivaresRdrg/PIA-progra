@@ -4,10 +4,10 @@ def main():
     while True:
         os.system("cls")
         print("=== MENÚ ===")
-        print("1. Personajes")
-        print("2. Naves")
-        print("3. Animales")
-        print("4. Archivos")
+        print("1. Consulta Web")
+        print("2. Consulta local")
+        print("3. Graficas")
+        print("4. Borrar info")
         print("5. Salir")
         Opcion = input("Seleccione una opción: ")
 
