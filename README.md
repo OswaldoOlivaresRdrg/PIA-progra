@@ -15,4 +15,6 @@ Actualizacion de Personajes de PIA 1.2:
 ---obtener_nombres: es una funcion que se utiliza para obtener unicamente los nombres de cualquier cosa que necesite un link concreto como las naves, recibe las URL's para dar los nombres     
 -se agregaron 2 funciones al modulo funPersonajes.py:     
 ---obtener_informacion_naves: funciona para obtener el personaje a partir de la ID y regresa los datos obtenidos de la api en una variable llamada datosNaves      
----obtener_informacion_peliculas: funciona para obtener el personaje a partir de la ID y regresa los datos obtenidos de la api en una variable llamada pelis
+---obtener_informacion_peliculas: funciona para obtener el personaje a partir de la ID y regresa los datos obtenidos de la api en una variable llamada pelis         
+Actualizacion de Naves de PIA 1.3:          
+-Se agregaron funciones a el modulo funNavesPeliculas.py            
