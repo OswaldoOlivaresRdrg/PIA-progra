@@ -1,21 +1,21 @@
 import archivos
 import subMenu
 
-def opcion_1():
+def Opcion_1():
     print("Has seleccionado Personajes.")
     subMenu.seleccion_especifica_personajes()
 
-def opcion_2():
+def Opcion_2():
     print("Has seleccionado Naves.")
     subMenu.seleccion_especifica_naves()
 
-def opcion_3():
+def Opcion_3():
     print("Has seleccionado Animales.")
 
-def opcion_4():
+def Opcion_4():
     print("Has seleccionado Archivos.")
     print(archivos.Archivo.read())
 
-def opcion_salir():
+def Opcion_salir():
     print("Saliendo del programa...")
     quit()

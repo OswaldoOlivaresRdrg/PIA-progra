@@ -1,4 +1,4 @@
-import Menu
+import menu
 import os
 def main():
     while True:
@@ -9,18 +9,18 @@ def main():
         print("3. Animales")
         print("4. Archivos")
         print("5. Salir")
-        opcion = input("Seleccione una opción: ")
+        Opcion = input("Seleccione una opción: ")
 
-        if opcion == "1":
-            Menu.opcion_1()
-        elif opcion == "2":
-            Menu.opcion_2()
-        elif opcion == "3":
-            Menu.opcion_3()
-        elif opcion == "4":
-            Menu.opcion_4()
-        elif opcion == "5":
-            Menu.opcion_salir()
+        if Opcion == "1":
+            menu.Opcion_1()
+        elif Opcion == "2":
+            menu.Opcion_2()
+        elif Opcion == "3":
+            menu.Opcion_3()
+        elif Opcion == "4":
+            menu.Opcion_4()
+        elif Opcion == "5":
+            menu.Opcion_salir()
         else:
             print("Opción inválida. Por favor, seleccione una opción válida.")
 
