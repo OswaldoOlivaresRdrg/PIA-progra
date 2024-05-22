@@ -50,6 +50,12 @@ def propiedades_naves(DatosNaves):
     print("Velocidad: ", DatosNaves['max_atmosphering_speed'])
     print("Tamaños:", DatosNaves['length'])
     print("Tipo de nave: ", DatosNaves['starship_class'])
+    with open("PIA.txt", "a") as f:
+        f.write("Nave: "+ DatosNaves['name']+ ": \n")
+        f.write("Velocidad: "+ DatosNaves['max_atmosphering_speed']+ ": \n")
+        f.write("Tamaños:"+ DatosNaves['length']+ " \n")
+        f.write("Tipo de nave: "+ DatosNaves['starship_class']+ " \n")
+        print("Se guardo correctamente")
     
 def informacion_detallada(DatosNaves):
     os.system("cls")
@@ -61,9 +67,17 @@ def informacion_detallada(DatosNaves):
     print("Pasajeros: ", DatosNaves['passengers'])
     print("Capacidad de carga: ", DatosNaves['cargo_capacity'])
     print("Hipervelocidad:", DatosNaves['hyperdrive_rating'])
-    print("Creada en: ", DatosNaves['created'])
     nombrePeliculas = obtener_nombres(DatosNaves['films'])
     print("Apariciones: ", nombrePeliculas)
+    with open("PIA.txt", "a") as f:
+        f.write("informacion de"+ DatosNaves['name']+ ": \n")
+        f.write("Modelo de nave: "+ DatosNaves['model']+ ": \n")
+        f.write("Fabricado por: "+ DatosNaves['manufacturer']+ " \n")
+        f.write("Costo: "+ DatosNaves['cost_in_credits']+ " \n")
+        f.write("Grupo: "+ DatosNaves['crew']+ " \n")
+        f.write("Capacidad de carga: "+ DatosNaves['cargo_capacity']+ " \n")
+        f.write("Hipervelocidad:"+ DatosNaves['hyperdrive_rating']+ " \n")
+        print("Se guardo correctamente")
 
 def obtener_nombres(urls):
     nombres = []
@@ -73,7 +87,3 @@ def obtener_nombres(urls):
             datos = respuesta.json()
             nombres.append(datos.get('name') or datos.get('title'))
     return nombres
-
-def escribir_en_archivo(contenido, archivo):
-    with open(archivo, "a") as f:
-        f.write(contenido + "\n")
