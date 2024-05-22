@@ -73,3 +73,7 @@ def obtener_nombres(urls):
             datos = respuesta.json()
             nombres.append(datos.get('name') or datos.get('title'))
     return nombres
+
+def escribir_en_archivo(contenido, archivo):
+    with open(archivo, "a") as f:
+        f.write(contenido + "\n")

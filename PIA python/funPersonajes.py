@@ -18,6 +18,15 @@ def mostrar_caracteristicas_fisicas(DatosPersonaje):
     print("Peso:", DatosPersonaje['mass'])
     print("ojos: ", DatosPersonaje['eye_color'])
     print("Piel: ", DatosPersonaje['skin_color'])
+    with open("PIA.txt", "a") as f:
+        f.write("Características Físicas de"+ DatosPersonaje['name']+ ": \n")
+        f.write("Altura:"+ DatosPersonaje['height']+ ": \n")
+        f.write("Peso:"+ DatosPersonaje['mass']+ " \n")
+        f.write("ojos: "+ DatosPersonaje['eye_color']+ " \n")
+        f.write("Piel: "+ DatosPersonaje['skin_color']+ "\n")
+        print("se guardo correctamente")
+        
+
 
 def mostrar_datos_generales(DatosPersonaje):
     os.system('cls')
@@ -32,6 +41,15 @@ def mostrar_datos_generales(DatosPersonaje):
     print("Naves pilotadas:", nombreNaves)
     nombrePeliculas = obtener_nombres(DatosPersonaje['films'])
     print("Apariciones: ", nombrePeliculas)
+    with open("PIA.txt", "a") as f:
+        f.write("Datos Generales de"+ DatosPersonaje['name']+ ": \n")
+        f.write("Género:"+ DatosPersonaje['gender']+ ": \n")
+        f.write("Año de nacimiento:"+ DatosPersonaje['birth_year']+ " \n")
+        f.write("Lugar de nacimiento: "+ str(nombrePlaneta)+ " \n")
+        f.write("Vehiculos: "+ str(listaVehiculos)+ "\n")
+        f.write("Naves pilotadas:"+ str(nombreNaves)+ "\n")
+        f.write("Apariciones: "+ str(nombrePeliculas)+ "\n")
+        print("se guardo correctamente")
 
 def obtener_nombres(urls):
     nombres = []

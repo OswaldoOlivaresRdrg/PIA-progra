@@ -14,8 +14,11 @@ def Opcion_3():
 
 def Opcion_4():
     print("Has seleccionado Archivos.")
-    print(archivos.Archivo.read())
+    archivos.ImpresionArchivo()
+
 
 def Opcion_salir():
+    subMenu.borrar_contenido()
+    
     print("Saliendo del programa...")
     quit()
