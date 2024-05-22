@@ -1,0 +1,14 @@
+Datos Generales deR2-D2: 
+Género:n/a: 
+Año de nacimiento:33BBY 
+Lugar de nacimiento: ['Naboo'] 
+Vehiculos: []
+Naves pilotadas:[]
+Apariciones: ['A New Hope', 'The Empire Strikes Back', 'Return of the Jedi', 'The Phantom Menace', 'Attack of the Clones', 'Revenge of the Sith']
+informacion deStar Destroyer: 
+Modelo de nave: Imperial I-class Star Destroyer: 
+Fabricado por: Kuat Drive Yards 
+Costo: 150000000 
+Grupo: 47,060 
+Capacidad de carga: 36000000 
+Hipervelocidad:2.0 

@@ -4,11 +4,10 @@ def main():
     while True:
         os.system("cls")
         print("=== MENÚ ===")
-        print("1. Personajes")
-        print("2. Naves")
+        print("1. Consulta web")
+        print("2. Consulta Local")
         print("3. Graficas")
-        print("4. Archivos")
-        print("5. Salir")
+        print("4. Salir")
         Opcion = input("Seleccione una opción: ")
 
         if Opcion == "1":
@@ -18,8 +17,6 @@ def main():
         elif Opcion == "3":
             menu.Opcion_3()
         elif Opcion == "4":
-            menu.Opcion_4()
-        elif Opcion == "5":
             menu.Opcion_salir()
         else:
             print("Opción inválida. Por favor, seleccione una opción válida.")
