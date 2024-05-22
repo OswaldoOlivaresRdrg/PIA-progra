@@ -1,6 +1,8 @@
 import os
 import funPersonajes
 import funNavesPeliculas
+import archivos
+
 def seleccion_especifica_personajes():
     while True:
         os.system("cls")
@@ -67,6 +69,14 @@ def obtener_informacion_id_naves():
             else:
                 print("Error al obtener la información de la nave.")
         except ValueError:
-            print("Valor no válido. Por favor, ingrese un número entero.")
+            print("Valor no válido. Por favor, ingrese un número entero.")\
+            
+def borrar_contenido():
+    guardar = input("desea guardar sus busquedas? (1 para aceptar)")
+    if guardar != '1':
+        archivo = open('PIA.txt','w')
+        archivo.write('')
+        archivo.close()
+
 
 

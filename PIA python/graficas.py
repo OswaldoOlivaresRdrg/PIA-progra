@@ -40,7 +40,6 @@ def generate_graphs(df):
     plt.title('Distribución de la Altura de los Personajes de Star Wars')
     plt.xlabel('Altura (cm)')
     plt.ylabel('Frecuencia')
-    plt.savefig('graficos/distribucion_altura.png')
     plt.show()
 
     # Gráfica 2: Conteo de personajes por género
@@ -49,7 +48,6 @@ def generate_graphs(df):
     plt.title('Conteo de Personajes por Género')
     plt.xlabel('Género')
     plt.ylabel('Conteo')
-    plt.savefig('graficos/conteo_genero.png')
     plt.show()
 
     # Gráfica 3: Relación entre altura y masa
@@ -58,7 +56,6 @@ def generate_graphs(df):
     plt.title('Relación entre Altura y Masa de los Personajes de Star Wars')
     plt.xlabel('Altura (cm)')
     plt.ylabel('Masa (kg)')
-    plt.savefig('graficos/relacion_altura_masa.png')
     plt.show()
 
 def main():
@@ -79,7 +76,4 @@ def main():
 
     # Generar graf
     generate_graphs(df)
-
-if __name__ == "__main__":
-    main()
 
