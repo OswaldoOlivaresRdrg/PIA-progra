@@ -6,7 +6,7 @@ def main():
         print("=== MENÚ ===")
         print("1. Personajes")
         print("2. Naves")
-        print("3. Animales")
+        print("3. Graficas")
         print("4. Archivos")
         print("5. Salir")
         Opcion = input("Seleccione una opción: ")

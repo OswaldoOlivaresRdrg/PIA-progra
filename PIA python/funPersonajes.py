@@ -26,8 +26,6 @@ def mostrar_caracteristicas_fisicas(DatosPersonaje):
         f.write("Piel: "+ DatosPersonaje['skin_color']+ "\n")
         print("se guardo correctamente")
         
-
-
 def mostrar_datos_generales(DatosPersonaje):
     os.system('cls')
     print("Datos Generales de", DatosPersonaje['name'], ": ")
