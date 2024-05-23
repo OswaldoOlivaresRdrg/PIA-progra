@@ -1,0 +1,13 @@
+
+Datos Generales de R2-D2: 
+Altura: 96: 
+Género: n/a: 
+Peso: 32 
+Ojos: red 
+Piel: white, blue
+Año de nacimiento: 33BBY 
+Lugar de nacimiento: ['Naboo'] 
+Vehiculos: []
+Naves pilotadas: []
+Apariciones: ['A New Hope', 'The Empire Strikes Back', 'Return of the Jedi', 'The Phantom Menace', 'Attack of the Clones', 'Revenge of the Sith']
+

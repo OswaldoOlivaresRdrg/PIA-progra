@@ -50,12 +50,6 @@ def propiedades_naves(DatosNaves):
     print("Velocidad: ", DatosNaves['max_atmosphering_speed'])
     print("Tamaños:", DatosNaves['length'])
     print("Tipo de nave: ", DatosNaves['starship_class'])
-    with open("PIA.txt", "a") as f:
-        f.write("Nave: "+ DatosNaves['name']+ ": \n")
-        f.write("Velocidad: "+ DatosNaves['max_atmosphering_speed']+ ": \n")
-        f.write("Tamaños:"+ DatosNaves['length']+ " \n")
-        f.write("Tipo de nave: "+ DatosNaves['starship_class']+ " \n")
-        print("Se guardo correctamente")
     
 def informacion_detallada(DatosNaves):
     os.system("cls")
@@ -69,15 +63,33 @@ def informacion_detallada(DatosNaves):
     print("Hipervelocidad:", DatosNaves['hyperdrive_rating'])
     nombrePeliculas = obtener_nombres(DatosNaves['films'])
     print("Apariciones: ", nombrePeliculas)
-    with open("PIA.txt", "a") as f:
-        f.write("informacion de"+ DatosNaves['name']+ ": \n")
-        f.write("Modelo de nave: "+ DatosNaves['model']+ ": \n")
-        f.write("Fabricado por: "+ DatosNaves['manufacturer']+ " \n")
-        f.write("Costo: "+ DatosNaves['cost_in_credits']+ " \n")
-        f.write("Grupo: "+ DatosNaves['crew']+ " \n")
-        f.write("Capacidad de carga: "+ DatosNaves['cargo_capacity']+ " \n")
-        f.write("Hipervelocidad:"+ DatosNaves['hyperdrive_rating']+ " \n")
-        print("Se guardo correctamente")
+    nombre_nave = DatosNaves['name']
+    informacion_nueva = (
+        f"\ninformacion de {nombre_nave}: \n"
+        f"Modelo de nave: {DatosNaves['model']}: \n"
+        f"Velocidad: {DatosNaves['max_atmosphering_speed']}: \n"
+        f"Tamaños: {DatosNaves['length']} \n"
+        f"Tipo de nave: {DatosNaves['starship_class']} \n"
+        f"Fabricado por: {DatosNaves['manufacturer']} \n"
+        f"Costo: {DatosNaves['cost_in_credits']} \n"
+        f"Grupo: {DatosNaves['crew']} \n"
+        f"Capacidad de carga: {DatosNaves['cargo_capacity']} \n"
+        f"Hipervelocidad: {DatosNaves['hyperdrive_rating']} \n"
+        "\n"
+    )
+
+    try:
+        with open("Naves.txt", "r") as f:
+            contenido_actual = f.read()
+    except FileNotFoundError:
+        contenido_actual = ""
+
+    if informacion_nueva.strip() in contenido_actual:
+        print("La información ya existe y no se agregará nuevamente.")
+    else:
+        with open("Naves.txt", "a") as f:
+            f.write(informacion_nueva)
+        print("La información se guardó correctamente.")
 
 def obtener_nombres(urls):
     nombres = []

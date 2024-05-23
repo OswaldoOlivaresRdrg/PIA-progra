@@ -18,13 +18,6 @@ def mostrar_caracteristicas_fisicas(DatosPersonaje):
     print("Peso:", DatosPersonaje['mass'])
     print("ojos: ", DatosPersonaje['eye_color'])
     print("Piel: ", DatosPersonaje['skin_color'])
-    with open("PIA.txt", "a") as f:
-        f.write("Características Físicas de"+ DatosPersonaje['name']+ ": \n")
-        f.write("Altura:"+ DatosPersonaje['height']+ ": \n")
-        f.write("Peso:"+ DatosPersonaje['mass']+ " \n")
-        f.write("ojos: "+ DatosPersonaje['eye_color']+ " \n")
-        f.write("Piel: "+ DatosPersonaje['skin_color']+ "\n")
-        print("se guardo correctamente")
         
 def mostrar_datos_generales(DatosPersonaje):
     os.system('cls')
@@ -39,15 +32,34 @@ def mostrar_datos_generales(DatosPersonaje):
     print("Naves pilotadas:", nombreNaves)
     nombrePeliculas = obtener_nombres(DatosPersonaje['films'])
     print("Apariciones: ", nombrePeliculas)
-    with open("PIA.txt", "a") as f:
-        f.write("Datos Generales de"+ DatosPersonaje['name']+ ": \n")
-        f.write("Género:"+ DatosPersonaje['gender']+ ": \n")
-        f.write("Año de nacimiento:"+ DatosPersonaje['birth_year']+ " \n")
-        f.write("Lugar de nacimiento: "+ str(nombrePlaneta)+ " \n")
-        f.write("Vehiculos: "+ str(listaVehiculos)+ "\n")
-        f.write("Naves pilotadas:"+ str(nombreNaves)+ "\n")
-        f.write("Apariciones: "+ str(nombrePeliculas)+ "\n")
-        print("se guardo correctamente")
+    nombre_personaje = DatosPersonaje['name']
+    informacion_nueva = (
+        f"\nDatos Generales de {nombre_personaje}: \n"
+        f"Altura: {DatosPersonaje['height']}: \n"
+        f"Género: {DatosPersonaje['gender']}: \n"
+        f"Peso: {DatosPersonaje['mass']} \n"
+        f"Ojos: {DatosPersonaje['eye_color']} \n"
+        f"Piel: {DatosPersonaje['skin_color']}\n"
+        f"Año de nacimiento: {DatosPersonaje['birth_year']} \n"
+        f"Lugar de nacimiento: {str(nombrePlaneta)} \n"
+        f"Vehiculos: {str(listaVehiculos)}\n"
+        f"Naves pilotadas: {str(nombreNaves)}\n"
+        f"Apariciones: {str(nombrePeliculas)}\n"
+        "\n"
+    )
+
+    try:
+        with open("Personajes.txt", "r") as f:
+            contenido_actual = f.read()
+    except FileNotFoundError:
+        contenido_actual = ""
+
+    if informacion_nueva.strip() in contenido_actual:
+        print("La información ya existe y no se agregará nuevamente.")
+    else:
+        with open("Personajes.txt", "a") as f:
+            f.write(informacion_nueva)
+        print("La información se guardó correctamente.")
 
 def obtener_nombres(urls):
     nombres = []

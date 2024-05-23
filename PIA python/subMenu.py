@@ -7,7 +7,7 @@ def seleccion_especifica_personajes():
     while True:
         os.system("cls")
         print("1. Caracteristicas Fisicas")
-        print("2. Datos generales")
+        print("2. Datos generales(guardar de forma local)")
         print("3. Salir")
         SelectorSubMenu = input("selecciona lo que desees: ")
         if SelectorSubMenu == "1":
@@ -27,7 +27,7 @@ def seleccion_especifica_naves():
     while True:
         os.system("cls")
         print("1. Datos importantes")
-        print("2. Datos detallados")
+        print("2. Datos detallados(guardar de forma local)")
         print("3. Salir")
         SelectorSubMenu = input("selecciona lo que desees: ")
         if SelectorSubMenu == "1":
@@ -72,11 +72,25 @@ def obtener_informacion_id_naves():
             print("Valor no válido. Por favor, ingrese un número entero.")\
             
 def borrar_contenido():
-    guardar = input("desea guardar sus busquedas? (1 para aceptar)")
-    if guardar != '1':
-        archivo = open('PIA.txt','w')
-        archivo.write('')
-        archivo.close()
-
-
+    while True:
+        print("¿Desea borrar los datos de búsqueda?")
+        print("1. Sí")
+        print("2. No")
+        Opcion = input("Seleccione opción: ")
+        
+        if Opcion == '1':  # '1' debe ser una cadena, no un entero
+            archivos = ['Personajes.txt', 'Naves.txt']
+            for nombre_archivo in archivos:
+                try:
+                    with open(nombre_archivo, 'w') as archivo:
+                        archivo.write('')
+                    print(f"El contenido de {nombre_archivo} ha sido borrado.")
+                except FileNotFoundError:
+                    print(f"Error: El archivo {nombre_archivo} no existe.")
+            break
+        elif Opcion == '2':
+            print("Se conservarán los datos.")
+            break 
+        else:
+            print("Opción inválida. Por favor, seleccione una opción válida.")
 

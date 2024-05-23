@@ -1,9 +1,11 @@
 import archivos
 import subMenu
 import graficas
+import os
 
 def Opcion_1():
     while True:
+        os.system("cls")
         print("Has seleccionado consulta web.")
         print("1. Personajes")
         print("2. Naves")

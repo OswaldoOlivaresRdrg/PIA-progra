@@ -1,0 +1,24 @@
+
+informacion de Star Destroyer: 
+Modelo de nave: Imperial I-class Star Destroyer: 
+Velocidad: 975: 
+Tamaños: 1,600 
+Tipo de nave: Star Destroyer 
+Fabricado por: Kuat Drive Yards 
+Costo: 150000000 
+Grupo: 47,060 
+Capacidad de carga: 36000000 
+Hipervelocidad: 2.0 
+
+
+informacion de CR90 corvette: 
+Modelo de nave: CR90 corvette: 
+Velocidad: 950: 
+Tamaños: 150 
+Tipo de nave: corvette 
+Fabricado por: Corellian Engineering Corporation 
+Costo: 3500000 
+Grupo: 30-165 
+Capacidad de carga: 3000000 
+Hipervelocidad: 2.0 
+
